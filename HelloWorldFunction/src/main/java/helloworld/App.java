@@ -27,6 +27,7 @@ public class App implements RequestHandler<LambdaRequestFriends, LambdaResponseB
 
             return responseBus;
         } catch (Exception e) {
+            responseBus.setError(e.toString());
             return responseBus;
         }
     }
